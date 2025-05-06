@@ -1,0 +1,35 @@
+Coding:-
+1. prefix sum
+2. two pointer
+3. fast and slow pointer
+4. sliding window
+5. monotonic Stack
+6. LinkedList in place reversal
+7. modified binary search
+8. Backtracking/ subset generation
+9. Top k elements pattern
+10. Divide and conquer(Shorting: Quick sort, merge sort, Kadane's algo)
+11. greedy algorithm
+12. Bit manipulation
+13. Matrix Traversal
+14. overlapping technique
+
+Tree based algorithm:-
+15. Binary tree Traversal(In-order, pre-order, post-order, type:-BST,AVL,HEAP)
+16. Binary tree(DFS,BFS)
+17. Segment Tree/ Fenwick Tree
+18. Tries
+
+Graph Algorithm:-
+19. DFS,BFS, Topological Sort
+20. Dijkstra's, Bellman-Ford, Floyd-Warshall, Tarjan's, Prism's, Krushkal's, Union-find
+
+Dynamic Programming concept:-
+21. 1D Dynamic programming:-
+    -> 0/1 Knapsack
+    -> Longest Increasing Subsequence(LIS)
+    -> Subset sum
+22. 2D Dynamic Programming:-
+    -> Fibonacci Numbers
+    -> Longest Common Subsequence(LCS)
+    -> Matrix Chain Multiplication
