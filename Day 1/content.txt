@@ -1,0 +1,278 @@
+#DAY-01
+
+
+#adding two no without any operator
+a = 5;
+b = 3;
+while(b!=0){
+b --;
+a++;
+}
+print(a) # 8
+
+#String is immutable then how it concatenated or add?
+
+In Python, strings are immutable, which means once a string is created, it cannot be changed in memory. So when you do something like:
+a = "Hello"
+b = "World"
+c = a + b
+You're not modifying a or b. Instead, Python creates a brand new string that contains "HelloWorld" and assigns it to c.
+What's happening behind the scenes?
+Python creates the string "Hello" and stores it in memory.
+It creates the string "World" and stores that too.
+When you use a + b, Python creates a new string object, copies the contents of a and b into it, and returns the new object.
+Why make strings immutable?
+Performance: Immutable objects are faster to access and manipulate internally.
+Security: They prevent accidental changes that might lead to bugs.
+Hashing: Immutable objects can be used as keys in dictionaries (hashable).
+
+Same concept for java also
+
+#Tree concept
+[5,1,2,3,4]
+target = 5
+using binary search tree
+
+#input and output in java:-
+
+In Java, input and output are commonly handled using built-in classes from the java.util and java.io packages. Here's a quick overview with examples:
+1. Input in Java (from the user)
+Using Scanner (most commonly used for console input):
+import java.util.Scanner;
+
+public class InputExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); // creating Scanner object
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine(); // reading a string input
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt(); // reading an integer input
+        System.out.println("Hello " + name + ", you are " + age + " years old.");
+        sc.close(); // closing Scanner
+    }
+}
+ 2. Output in Java
+Using System.out.print and System.out.println:
+public class OutputExample {
+    public static void main(String[] args) {
+        System.out.print("This is printed on the same line. ");
+        System.out.println("This is printed on a new line.");
+        System.out.println("Sum of 5 and 3 is: " + (5 + 3));
+    }
+}
+Other Input Methods (advanced)
+BufferedReader (faster, used for large input)
+Console (for secure inputs like passwords)
+File input/output (FileReader, FileWriter, etc.)
+
+
+#class and object:-
+In Java, classes and objects are fundamental concepts of Object-Oriented Programming (OOP). A class is a blueprint or template that defines the properties and behaviors of objects. An object is an instance of a class.
+
+1. Class Declaration in Java:
+A class in Java is declared using the class keyword. It contains fields (also known as attributes or properties) and methods (the functions or behaviors of the class).
+class Car {
+    // Fields (Attributes)
+    String make;
+    String model;
+    int year;
+
+    // Constructor (special method to initialize the object)
+    Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    // Method (Behavior)
+    void displayCarDetails() {
+        System.out.println("Make: " + make + ", Model: " + model + ", Year: " + year);
+    }
+}
+2. Creating an Object:
+An object is an instance of a class, created using the new keyword. When an object is created, the class's constructor is called to initialize the object.
+public class Main {
+    public static void main(String[] args) {
+        // Creating an object of the Car class
+        Car myCar = new Car("Toyota", "Corolla", 2020);
+        
+        // Calling the method on the object
+        myCar.displayCarDetails(); // Output: Make: Toyota, Model: Corolla, Year: 2020
+    }
+}
+3. Method Declaration in Java:
+A method in Java is a function that defines the behavior of the object. It consists of:
+Access modifiers (e.g., public, private)
+Return type (e.g., void, int, String)
+Method name
+Parameters (optional)
+Method body (contains code that gets executed)
+
+Example of a method declaration:
+// Method that returns the area of a rectangle
+public int calculateArea(int length, int width) {
+    return length * width;
+}
+Key Points:
+Access modifiers control the visibility of methods (public, private, etc.).
+
+Return type specifies what type of data the method will return (if it’s void, the method doesn’t return anything).
+
+Parameters are the inputs that the method can accept (if needed).
+
+Method body contains the code executed when the method is called.
+
+
+#declaration should be outside the class and calling should be inside the class
+
+
+#task :-
+take age(int),name(string), marks(float),passout(bool),Erp(long) and print students deataild without print by using methods only
+
+To accomplish this task in Java, we can create a Student class with the following attributes: age, name, marks, passout, and Erp. We can use a method to return these details instead of directly using System.out.println.
+
+Code Example:
+class Student {
+    // Attributes (Fields)
+    int age;
+    String name;
+    float marks;
+    boolean passout;
+    long Erp;
+
+    // Constructor to initialize the attributes
+    Student(int age, String name, float marks, boolean passout, long Erp) {
+        this.age = age;
+        this.name = name;
+        this.marks = marks;
+        this.passout = passout;
+        this.Erp = Erp;
+    }
+
+    // Method to get student details
+    String getStudentDetails() {
+        return "Student Name: " + name + "\n" +
+               "Age: " + age + "\n" +
+               "Marks: " + marks + "\n" +
+               "Passout Status: " + (passout ? "Yes" : "No") + "\n" +
+               "ERP: " + Erp;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating a Student object
+        Student student1 = new Student(20, "Kaushal Prasad", 85.5f, true, 123456789L);
+        
+        // Printing student details by calling the method
+        String studentDetails = student1.getStudentDetails();
+        System.out.println(studentDetails);
+    }
+}
+Explanation:
+Attributes (Fields):
+We have age (int), name (String), marks (float), passout (boolean), and Erp (long) as the fields in the Student class.
+Constructor:
+The constructor initializes these attributes when a Student object is created.
+Method:
+The getStudentDetails() method returns a formatted string containing the student's details.
+Main Class:
+In the main() method, we create a Student object with sample values and call the getStudentDetails() method to print the student's details.
+Sample Output:
+Student Name: Kaushal Prasad
+Age: 20
+Marks: 85.5
+Passout Status: Yes
+ERP: 123456789
+This way, the student's details are printed by using the method getStudentDetails() without directly using System.out.println() for each field.
+
+
+#recursion
+Function call itself
+
+1. Fibonacci Series using Recursion:
+The Fibonacci series is a sequence where each number is the sum of the two preceding ones, starting from 0 and 1. The formula is:
+F(n) = F(n-1) + F(n-2)
+
+
+public class RecursionExample {
+    // Fibonacci series using recursion
+    public static int fibonacci(int n) {
+        if (n <= 1) {
+            return n;
+        }
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
+    public static void main(String[] args) {
+        int num = 10;  // Example: Print first 10 Fibonacci numbers
+        System.out.println("Fibonacci Series:");
+        for (int i = 0; i < num; i++) {
+            System.out.print(fibonacci(i) + " ");
+        }
+    }
+}
+Explanation:
+The fibonacci() method calls itself to calculate the previous two Fibonacci numbers until the base case (n <= 1) is reached.
+In the main() method, we print the first 10 Fibonacci numbers.
+
+2. Factorial using Recursion:
+The factorial of a non-negative integer n is the product of all positive integers less than or equal to n. The formula is:
+n! = n * (n-1) * (n-2) * ... * 1
+
+Factorial can be defined recursively as:
+
+n! = n * (n-1)!
+Where 0! = 1.
+
+
+public class RecursionExample {
+    // Factorial using recursion
+    public static int factorial(int n) {
+        if (n == 0) {
+            return 1;  // Base case: 0! = 1
+        }
+        return n * factorial(n - 1);  // Recursive case
+    }
+
+    public static void main(String[] args) {
+        int num = 5;  // Example: Calculate factorial of 5
+        System.out.println("Factorial of " + num + " is: " + factorial(num));
+    }
+}
+Explanation:
+The factorial() method calls itself to calculate the factorial of n until the base case (n == 0) is reached.
+In the main() method, we calculate the factorial of 5.
+
+3. HCF (Highest Common Factor) using Recursion:
+The HCF of two numbers is the largest number that divides both of them without leaving a remainder. We can use Euclid's algorithm for finding the HCF, which is based on the property:
+
+
+HCF(a, b) = HCF(b, a % b)
+Where the base case is HCF(a, 0) = a.
+
+
+public class RecursionExample {
+    // HCF using recursion (Euclid's Algorithm)
+    public static int hcf(int a, int b) {
+        if (b == 0) {
+            return a;  // Base case: HCF(a, 0) = a
+        }
+        return hcf(b, a % b);  // Recursive case
+    }
+
+    public static void main(String[] args) {
+        int num1 = 56, num2 = 98;  // Example: Find HCF of 56 and 98
+        System.out.println("HCF of " + num1 + " and " + num2 + " is: " + hcf(num1, num2));
+    }
+}
+Explanation:
+The hcf() method uses recursion to find the HCF by calling itself with the parameters b and a % b until b becomes 0. When b == 0, the function returns a, which is the HCF.
+In the main() method, we find the HCF of 56 and 98.
+Output for the above code:
+Fibonacci Series:
+0 1 1 2 3 5 8 13 21 34 
+Factorial of 5 is: 120
+HCF of 56 and 98 is: 14
+
+
