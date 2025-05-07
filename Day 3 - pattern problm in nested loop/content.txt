@@ -1,0 +1,344 @@
+Nested loop:-
+A loop inside a loop is called nested loop
+For every problem there will be three type of solution.
+1. Brute force
+2. Better 
+3. Optimal
+Most of the brute solution will get using 2 loops(nested loop)
+And most of the solution can solve using 2 loops(nested loop)
+
+class Main{
+public static void main(String[] args){
+for(int i = 1; i<=n;i++){
+for(int j=1; j<=1;j++){
+
+}
+}
+}
+
+Time complexity = n^2
+
+
+class Main{
+public static void main(String[] args){
+int a = 0;
+for(int i = 1; i<=5;i++){
+for(int j=1; j<=5;j++){
+}
+}
+}
+}
+
+#Pattern Printing:-
+Step 1:- print no of rows
+Step 2:- print no of colums
+Step 3:- print what to print and what not to print
+
+
+# example:-
+*****
+*****
+*****
+*****
+*****
+class Main{
+public static void main(String[] args){
+int a = 0;
+for(int i = 1; i<=5;i++){
+for(int j=1; j<=5;j++){
+	System.out.println("*");
+
+	}
+     }
+   }
+}
+output:-
+
+************************************************************
+
+
+class Main{
+public static void main(String[] args){
+int a = 0;
+for(int i = 1; i<=5;i++){
+for(int j=1; j<=5;j++){
+	System.out.println("*");
+
+	}
+     }
+System.out.println();
+   }
+}
+
+output:-
+*****
+*****
+*****
+*****
+*****
+
+#
+*****
+*   *
+*   *
+*   *
+*****
+class Main{
+public static void main(String[] args){
+int a = 0;
+for(int i = 1; i<=5;i++){
+for(int j=1; j<=5;j++){
+if(i==1 || i == 5 || j == 1 || j == 5){
+System.out.println("*");
+}
+else{
+System.out.prinln(" ");
+	}
+     }
+System.out.println();
+   }
+}
+
+#
+*****(1,1)
+**  *(2,2)
+* * *(3,3)
+*  **(4,4)
+*****(5,5)
+class Main{
+public static void main(String[] args){
+int a = 0;
+for(int i = 1; i<=5;i++){
+for(int j=1; j<=5;j++){
+if(i==1 || i == 5 || j == 1 || j == 5 || i==){
+System.out.println("*");
+}
+else{
+System.out.prinln(" ");
+	}
+     }
+System.out.println();
+   }
+}
+
+
+#
+*****(1,5)=6
+*  ** (2,4)=6
+* * *(3,3)=6
+**  *(4,2)=6
+*****(1,5)=6
+
+class Main{
+public static void main(String[] args){
+int a = 0;
+for(int i = 1; i<=5;i++){
+for(int j=1; j<=5;j++){
+if(i==1 || i == 5 || j == 1 || j == 5 || i==j || i+j==6){
+System.out.println("*");
+}
+else{
+System.out.prinln(" ");
+	}
+     }
+System.out.println();
+   }
+}
+
+*
+**
+***
+****
+*****
+class Main {
+public static void main(String[] args) {
+for (int i = 1; i <= 5; i++) {
+for (int j = 1; j <= i; j++) {
+System.out.print("* ");
+ }
+System.out.println();
+        }
+    }
+}
+
+
+*
+**
+* *
+*  *
+*****
+class Main {
+public static void main(String[] args) {
+for (int i = 1; i <= 5; i++) {
+for (int j = 1; j <= i; j++) {
+if(i==j||i==5||j==1){
+System.out.print("* ");
+ }else{
+System.out.println(" ");
+}
+}
+System.out.println();
+    }
+}
+
+#
+  *
+ ***
+*****
+
+public class PyramidPattern {
+    public static void main(String[] args) {
+        int rows = 3;
+
+        for (int i = 1; i <= rows; i++) {
+            // Print spaces
+            for (int j = i; j < rows; j++) {
+                System.out.print(" ");
+            }
+            // Print stars
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+            // Move to the next line
+            System.out.println();
+        }
+    }
+}
+
+
+
+#check wheather a given no is prime or not
+class Main {
+public static void main(String[] args) {
+for(int i = 2;i<n;i++){
+if (n%i == 0){
+return false;
+}
+return true;
+}
+}
+
+#prime in a range
+class Main {
+public static void main(String[] args) {
+for(int i = 1;i<=num;i++){
+for(int j = 2;j<i;j++){
+if (n%i == 0){
+continue;
+}
+}
+System.out.println(i)
+}
+}
+}
+
+
+153%10->3
+153/10->15
+15%10->5
+15/10-> 1
+1+125+27 = 153
+
+Armstrong no
+
+#check wheather a no is a Armstrong or not
+
+#brute force approach
+class Main {
+public static void main(String[] args) {
+int num = 153;
+int num1 = 0;
+int i = 0;
+while (num !=0){
+int num1 = num % 10;
+int num1 = num1 * num1 * num1;
+int tot = num1 + tot;
+int num2 = (num/10);
+}
+if(tot == num)
+print("Armstrong")
+else:
+print("not Armstrong)
+}
+}
+}
+
+#optimal approach
+
+
+#do-while statement:-
+#example 1
+import java.util.*;
+public class ATM{
+public static void main(String[] args){
+Scanner scanner = new Scanner(System.in);
+int correctPin = 1234;
+int userPin;
+do{
+System.out.print("Enter your PIN:");
+userPin = scanner.nextInt();
+if(userPin != correctPin){
+System.out.println("Incorrect PIN. Try again");
+}while(userPin != correctPin);
+System.out.println("PIN verified. Access granted");
+Scanner.close();
+}
+}
+}
+
+#example 2
+import java.util.Scanner;
+
+public class ATMExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int choice;
+        double balance = 1000.0;  // Initial balance
+
+        do {
+            System.out.println("\n--- ATM Menu ---");
+            System.out.println("1. Check Balance");
+            System.out.println("2. Withdraw Money");
+            System.out.println("3. Deposit Money");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+            choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.println("Your current balance is: ₹" + balance);
+                    break;
+
+                case 2:
+                    System.out.print("Enter amount to withdraw: ₹");
+                    double withdraw = scanner.nextDouble();
+                    if (withdraw <= balance) {
+                        balance -= withdraw;
+                        System.out.println("Withdrawal successful. New balance: ₹" + balance);
+                    } else {
+                        System.out.println("Insufficient balance!");
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Enter amount to deposit: ₹");
+                    double deposit = scanner.nextDouble();
+                    balance += deposit;
+                    System.out.println("Deposit successful. New balance: ₹" + balance);
+                    break;
+
+                case 4:
+                    System.out.println("Exiting... Thank you!");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        } while (choice != 4);
+
+        scanner.close();
+    }
+}
+
+
+
