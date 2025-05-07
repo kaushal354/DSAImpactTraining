@@ -1,0 +1,295 @@
+// using static keyword static block will be created and it is a singleton block
+//static method :- for static method no need to create an object static will act as instance or object and using class name 
+//you can call static methods
+
+class Demo{
+static{
+	System.out.println("Static Block");
+	}
+	Demo(){
+	System.out.println("Cosntructor");
+	}
+}
+public class q2{
+	public static void main(String[] args){
+	Demo d1 = new Demo();
+	Demo d2 = new Demo();
+	}
+}
+
+class q2{
+	public static void main(String[] args){
+	Demo d1 = new Demo();
+	Demo d2 = new Demo();
+	}
+}
+
+class Demo{
+static{
+	System.out.println("Static Block");
+	}
+	Demo(){
+	System.out.println("Cosntructor");
+	}
+}
+
+example for static method
+
+class Animal{
+static void eat(){
+System.out.println("Animal is eating");
+}
+}
+class Dog extends Animal{
+static void eat(){
+System.out.println("Dog is eating");
+}
+}
+public class Main{
+public static void main(String[] args){
+Animal.eat();
+Dog.eat();
+}
+}
+
+
+//Construction
+Initilization of object 
+initialization means you are calling default constructor to create objects
+
+//Conditional statement
+To check the condition and it will print that block
+conditional statement are used to get the output in constant time
+
+types:
+if, else, else-if, switch
+
+import java.util.Scanner;
+class Cond{
+public static void main(String[] args){
+Scanner sc =  new Scanner(System.in);
+ System.out.println("enter a value of a");
+int a = sc.nextInt();
+System.out.println("enter a value of b");
+int b = sc.nextInt();
+if(a<b){
+System.out.println(a+"is smaller");
+}else{
+System.out.println(b+"is larger");
+}
+}
+}
+
+
+//hcf
+class Demo{
+int hcf(int a, int b){
+if (b==0){
+return a;
+}else{
+return hcf(b,a%b);
+}
+}
+class Main{
+public static void main(String[] args){
+Demo obj = new Demo();
+int res = obj.hcf(18,12);
+System.out.println(res);
+}
+}
+
+//switch case
+public class SwitchExample {
+    public static void main(String[] args) {
+        int day = 3; // Example day (1=Monday, 2=Tuesday, ..., 7=Sunday)
+
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Invalid day");
+                break;
+        }
+    }
+}
+
+//control statement
+control statement has two type of loop:-
+1. entery control(for, while)
+2. exit control loop(do while)
+
+for(start,end, difference){
+}
+start = initialization
+end = condition
+difference =  inc/ dec
+while loop(end){
+diff
+}
+
+// when you know the range use for loop
+// when you don't know the range use while loop
+
+write nth table
+5*1 = 5
+5*2 = 10
+5*3 = 15
+5*4 = 20
+5*5 = 25
+.
+.
+.
+.
+5*10 = 50
+import java.util.*;
+class Table{
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+int num = sc.nextInt();
+int i = 1;
+while(i<=10){
+System.out.println(num +"x"+i +  "=" + (i*num));
+i++;
+}
+}
+}
+
+
+//Factorial and Fibonacci
+//factorial
+import java.util.*;
+class Table{
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+int num = sc.nextInt();
+int num1 = 1;
+while (num >1){
+num1 = num1 * num;
+num--;
+
+}
+System.out.println("Factorial is" + num1);
+}
+}
+
+//Fibonacci
+import java.util.*;
+class Table{
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+int num = sc.nextInt();
+int num1 = 0;
+int num2 = 1;
+System.out.println(num1+",");
+System.out.println(num2+",");
+int i=2;
+while(i<num){
+if (num1<num2){
+num1 = num1+num2;
+System.out.println(num1+",");
+i++;
+}else{
+num2 = num1+num2;
+System.out.println(num2+",");
+i++;
+}
+}
+}
+}
+
+//reversing a number
+import java.util.*;
+class Table {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter a number: ");
+int num = sc.nextInt();
+int reversed = 0;
+while (num != 0){
+int digit = num % 10;      
+reversed = reversed * 10 + digit; 
+num = num / 10;          
+}
+System.out.println("Reversed number: " + reversed);
+sc.close();
+}
+}
+
+
+//overriding example
+
+class Animal{
+void eat(){
+System.out.println("Animal is eating");
+}
+}
+class Dog extends Animal{
+@override
+void eat(){
+System.out.println("Dog is writing");
+}
+}
+public class Main{
+public static void main(String[] args){
+Animal animal = new Dog();
+animal.eat();
+}
+}
+
+
+
+
+*****
+  *
+    *
+      *
+   *****
+
+If(i == 1|| i == n|| i == j){
+System.out.println("*")
+}else{
+System.out.println(" ")
+}
+
+*****
+   *
+  *
+ *
+*****
+
+if
+
+
+******
+ *  *
+   *
+
+
+*****
+** **
+* * *
+*   *
+*   *
+
+
+
+
