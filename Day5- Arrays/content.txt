@@ -1,0 +1,279 @@
+#Array:-
+
+class Main{
+public static void main{
+int a = 5
+int b = 6
+int c = 7
+}
+}
+->All the reference name will be stored in stack memory and all the value which were assigned to those variable will be showed in heap memory.
+question1. Here all the blocks are in same datatypes. if all the blocks having same data types why to create multiple variables.
+Simply we can create an array. To store all those values.
+
+arr[] = [5,6,7]
+
+Define array:-
+Collection of similar type of data in a continues allocations.
+
+if var =  'a' store at address 100 then the second value of an array should be allocated at 104.(This is called continuoes allocation)
+
+Syntax:-
+
+datatype[] arrayname;
+
+
+class Main{
+public static void main(String[] args){
+int[] arr = {1,2,3,4,5};
+}
+}
+Declration is in firstline and initialization in 2nd line.
+
+class Main{
+public static void main(String[] args){-> Declration is in firstline and initialization in 2nd line.
+int[] arr = {1,2,3,4,5};
+int[] arr;
+arr = {1,2,3,4,5};
+}
+}
+
+#if you want to get the data previously restore all the datavalues in seprate variables and individual variable. if you want to get the data you can simply print the variable and in array we have to print the data using index value.
+#all the index values by default start with 0.
+
+class Main{
+public static void main(String[] args){
+int[] arr = {1,2,3,4,5};
+System.out.println(arr[1]);
+}
+}
+
+
+class Main{
+public static void main(String[] args){
+int[] arr = {1,2,3,4,5};
+for(int i=0;i<arr.length;i++){
+System.out.println(arr[i]);
+}
+}
+}
+
+#if you get the size of the array we have to use arr.length .
+#to get the length of string str.length().
+
+#type of output format:-
+1. we can use simple for loop to get the output
+2. Using for-each loop 
+3. Arrays.toString(arr);
+
+
+import java.util.*;
+class Main{
+public static void main(String[] args){
+int[] arr = {1,2,3,4,5};
+for(int i=0;i<arr.length;i++){
+System.out.println(arr[i]);
+
+for(int i:arr){
+System.out.println(i);
+}
+System.out.println(Arrays.toString(arr));
+}
+}
+}
+
+-> tostring is an inbuilt method to print array values.in java.util package.
+
+->Internally toString contain for loop and it will print along with open and closed bracked follow by commas.
+
+
+CamelCase and SnakeCase:-
+
+#int odd_count; SnakeCase
+#int oddCount; #int addTwoValues() Camel
+
+
+->Java Strictly follow CamelCase.
+
+#In a given Array count no will be there check a odd and even
+
+class Main{
+public static void main(String[] args){
+int arr[] = {2,3,5,6,8};
+int oddCount = 0;
+int evenCount = 0;
+for(int i:arr){
+if(i%2 == 0){
+evenCount++;
+}else{
+oddCount++;
+}
+}
+System.out.println("Odd Count is-:"+oddCount+ "Even Count is:-"+evenCount);
+}
+}
+
+
+
+
+#print 1st and 2nd highest element of array
+
+class Main {
+public static void main(String[] args) {
+int arr[] = {2, 3, 5, 6, 8};
+int highest = arr[0];
+int secondHighest = arr[0];
+for (int i = 0; i < arr.length; i++) {
+if (arr[i] > highest) {
+secondHighest = highest;
+highest = arr[i];
+} else if (arr[i] > secondHighest && arr[i] != highest) {
+secondHighest = arr[i];
+}
+}
+System.out.println("Highest value: " + highest);
+System.out.println("Second highest value: " + secondHighest);
+}
+}
+
+Time complexity = O(2n)
+
+Target = O(n):
+
+class Main {
+public static void main(String[] args) {
+int arr[] = {2, 3, 5, 6, 8};
+int highest = Integer.MIN_VALUE;
+int secondHighest = Integer.MIN_VALUE;
+for (int i = 0; i < arr.length; i++) {
+if (arr[i] > highest) {
+secondHighest = highest;
+highest = arr[i];
+} else if (arr[i] > secondHighest && arr[i] != highest) {
+secondHighest = arr[i];
+}
+}
+System.out.println("Highest value: " + highest);
+System.out.println("Second highest value: " + secondHighest);
+}
+}
+
+#what if we have duplicate:
+
+
+
+#array in list:-
+
+
+class Main {
+public static void main(String[] args) {
+int arr[] = new int[5];
+System.out.println(arr[0]);
+}
+}
+
+import java.util.Scanner;
+
+class Reversnumber{
+    public static void main(String[] args) {
+        
+        Scanner in = new Scanner(System.in);
+        int[] arr=new int[5];
+        for(int i=0;i<arr.length;i++){
+            arr[i] = in.nextInt();
+        }
+        for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i]);
+        }
+    }
+}
+once you created an array along with size it can't be modified the sized will be fixed.
+int[] arr it will be created in stack memory and will call it as a reference .
+and new keyword help to create object space for the array
+if the array type is integer by default all the value will be zero
+and array type is string then all the default value will be null.
+
+
+#Whenever we are trying to assign or print nth index we will get array out of bound exception it is not an error it is an exception
+
+#primitive and non- primitive data :-
+
+//when ever we trying to assign or print nth index we will got array out of box 
+//primitive and non 
+//primitive data types cant be splitted are divided 
+//examples int float char
+//non primitive can be splitted are divided 
+//example strings and all user difine objects 
+//one more example for non primitive 
+
+//class  node{
+// int data;
+// Node next
+// }
+
+
+#check wheather the given is sorted or not 
+class Main {
+public static void main(String[] args) {
+int[] arr = {1, 2, 3, 4, 5};
+int count = 0;
+for(int i = 1; i < arr.length; i++) {
+ if(arr[i] >= arr[i - 1]) {
+ count++;
+ } else {
+ System.out.println("Not sorted");
+return; 
+}
+}
+if(count == arr.length - 1) { 
+System.out.println("Sorted");
+}
+}
+}
+
+
+
+
+
+#check wheather the element is there are not
+
+
+class Main{
+public static void main(String[] args){
+int[] arr ={1,2,3,4,5);
+int target = 4;
+int flag = 0;
+for(int i =0;i<arr.length; i++){
+if(arr[i] == target){
+flag = 1;
+}
+}
+if(flag =1){
+System.out.println("yes");
+}else {
+System.out.println("No");
+}
+
+class Main{
+static int getIndex(int[] arr,int target){
+int[] arr ={1,2,3,4,5);
+int target = 4;
+int flag = 0;
+for(int i =0;i<arr.length; i++){
+if(arr[i] == target){
+return i;
+}
+
+}
+return -1
+}
+public static void main(String[] args){
+int[] arr ={1,2,3,4,5};
+int target = 4;
+System.out.println(getIndex(arr,target);
+
+#[1,0,1,0,1,0] move all zeros to right side [1,1,1,0,0,0] to left
+
+
+
+
