@@ -1,0 +1,331 @@
+2-D array:-(2 dimensional array):-
+2-D array consist rows and columns :-
+
+
+#syntax:-
+int[][] arr = new int[3][2]
+
+
+-> the first square bracket represent rows 
+-> the second square bracket represent columns
+-> while declaring the array we have to give no of rows and to mention no of columns is optional.
+
+
+--     ___
+ |    |
+ |a[1]| ->[3,4]
+ |a[0]| -> [1,2]
+
+class Main{
+public static void main{
+int[][] arr = new int[3][2];
+for(int i =0;i<arr.length;i++){
+for(int j = 0;j<arr[i].length;j++){
+arr[i][j] = in.nextInt();
+
+}
+}
+for(int i =0;i<arr.length;i++){
+for(int j=0;j<arr[i].length;j++){
+System.out.println(arr[i][j]);
+}
+System.out.println();
+}
+}
+}
+
+class Main{
+public static void main{
+Scanner in = new Scanner(System.in);
+int[][] arr = new int[3][2];
+System.out.println("Enter the value:-");
+for(int i =0;i<arr.length;i++){
+for(int j = 0;j<arr[i].length;j++){
+arr[i][j] = in.nextInt();
+}
+}
+for(int i=0;i<arr.length;i++){
+System.out.println(Array.toString(arr[i]));
+}
+
+}
+}
+
+
+
+#size and length
+
+arr[5] = {1,2,3}
+size = 5
+length = 3
+
+
+
+#
+{
+{1,2,3},
+{4,5,6},
+{7,8,9}
+}
+
+sum of zig-zag elements --> 1,2,3,5,7,8,9 --> 35
+
+
+
+public class Main {
+public static void main(String[] args) {
+int[][] arr = {
+{1, 2, 3},
+{4, 5, 6},
+{7, 8, 9}
+};    
+int sum = 0;
+for (int j = 0; j < arr[0].length; j++) {
+sum += arr[0][j];
+}
+sum += arr[1][1];
+for (int j = 0; j < arr[2].length; j++) {
+if (j == 0 || j == arr[2].length - 1) {
+sum += arr[2][j];
+}
+}
+System.out.println("Sum of zig-zag elements: " + sum);
+}
+}
+
+
+public class Main {
+public static void main(String[] args) {
+Scanner in = new Scanner(System.in);
+int[][] arr = {
+{1, 2, 3},
+{4, 5, 6},
+{7, 8, 9}
+};    
+int sum = 0;
+for(int i =0;i<arr.length;i++){
+for(int j = 0;
+}
+}
+System.out.println("Sum of zig-zag elements: " + sum);
+}
+}
+
+
+#Find the missing number in an sorted array
+
+class Main{
+public static void main(String[] args){
+int[] arr = new arr[10];
+int arr = {1,2,3,5,6,7,8,9};
+int lastnum = arr.length;
+for(i=0;i<=lastnum;i++){
+for(j=0;j<=arr.length;j++){
+if(i==arr[j]){
+i++;
+}else{
+return i;
+}
+}
+}
+
+for(int i =0;i<arr.length-1;i++){
+if (arr[i] + 1 != arr[i+1]){
+int res = arr[i] + 1
+System.out.println(res);
+
+}}
+
+
+#Maximum consecutive ones:
+
+class Main{
+public static void main(String[] args){
+int[] arr = new arr[10];
+int count = 0;
+int max = 0;
+int arr = {1,0,1,0,1,1,1,0,1,1};
+for(i=0;i<=arr.length;i++){
+if(arr[i]==1){
+count++;
+}else{
+int max = count;
+count = 0
+}
+return max;
+}
+}
+}
+
+
+int max = 0;
+int count = 0;
+int arr = {1,0,1,0,1,1,1,0,1,1};
+for(i=0;i<=arr.length-1;i++){
+if(arr[i]==1){
+count++;
+}else{
+count = 0;
+}
+max = Math.max(count,max);
+#max function
+}
+System.out.println(max);
+}
+}
+
+#max function:-
+int max(int count, int max){
+if(count>max){
+return count;
+}else{
+return max;
+}
+}
+
+
+
+#jagged array:-
+
+->columns are dynamic
+
+
+class Main{
+public static void main(String[] args){
+Scanner in = new Scanner(System.in);
+int[][] arr = {
+{1,2,3,},
+{4,5,},
+{6,7,8,9}
+};
+for(int i=0;i<arr.length;i++){
+System.out.println(Arrays.toString(arr[i]));
+}
+}
+
+
+#Take a square matrix rotate 90 degree 
+
+123	147        741
+456 --> 258        852
+789     369        963
+
+#for transpose
+class Main{
+public static void main(String[] args){
+Scanner in = new Scanner(System.in);
+int[][] arr =new int[3][3];
+System.out.println("enter a new value");
+for(i=1;i<arr.length;i++){
+for(j=1;i<arr[0].length;j++){
+arr[i][j] = in.nextInt();
+}
+}
+for(int i =0;i<arr.length;i++){
+for(int j=0;j<arr[i].length;j++){
+System.out.println(arr[j][i]);
+}
+System.out.println()
+}
+}
+
+#for 90 degree rotate
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int[][] arr = new int[3][3];
+
+        System.out.println("Enter 9 values for a 3x3 matrix:");
+
+        // Reading input
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                arr[i][j] = in.nextInt();
+            }
+        }
+
+        // Rotating the matrix by 90 degrees clockwise
+        int[][] rotated = new int[3][3];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                rotated[j][arr.length - 1 - i] = arr[i][j];
+            }
+        }
+
+        // Printing rotated matrix
+        System.out.println("Matrix after 90-degree rotation:");
+        for (int i = 0; i < rotated.length; i++) {
+            for (int j = 0; j < rotated[0].length; j++) {
+                System.out.print(rotated[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+#Leaders in an array problems.
+[11,3,5,9,4,6] --> [11,9,6]
+
+
+class Main{
+public static void main(String[] args){
+Scanner in = new Scanner(System.in);
+int arr = {11,3,5,9,4,6}
+int[5] lead;
+int count = 0;
+for(i=0;i<arr.length;i++){
+for(j = i;j<arr.length;j++){
+if(arr[i] <arr[j]){
+count++;
+}
+if(count>0){
+lead= arr[i]
+count = 0;
+}else{
+count = 0;
+}
+}
+}
+
+
+#optimal ones
+public class{
+public static List<Integer> findLeaders(int[] arr){
+List<Integer> leaders = new ArrayList<>();
+int minExtreme =Intger.MIN_VALUE;
+for(int i = arr.length-1;i>=0;i--){
+if(arr[i] >minExtreme){
+leaders.add(arr[i]);
+minExtreme = arr[i];
+}
+}
+Collections.reverse(leaders);
+return leaders;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
