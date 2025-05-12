@@ -1,0 +1,313 @@
+#next greater element
+#n-meeting in a room
+#median of two sorted array
+#Stocks buy and sell return max profit 
+
+class Main{
+public static void main(String[] args){
+
+
+}
+
+
+#stocks buy and sell return max profit
+
+
+[7,1,5,3,6,4]
+
+
+class Main{
+public static void main(String[] args){
+int[] arr = {7,6,4,3,1};
+int min = arr[0];
+int max = 0;
+for(int I= 1;i<arr.length;i++){
+if(min>arr[i]){
+min = arr[i];
+}else{
+int profit = arr[i] - min;
+if (profit >max){
+max = profit;
+}
+}
+return max;
+}
+}
+}
+
+#[7,1,5,3,6,4] = 6
+start from 0 index
+
+class Main{
+public static void main(String[] args){
+int[] arr = {7,6,4,3,1};
+int max = arr[0];
+int min = 0;
+for(int I= 1;i<arr.length;i++){
+if(max<arr[i]){
+max = arr[i];
+}else{
+int profit = max - arr[i];
+if (profit >max){
+max = profit;
+}
+}
+return max;
+}
+}
+}
+
+
+
+#n-greater element
+[2,8,1,4,3,6]
+[8-1,4,6,6-1]
+
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {2, 8, 1, 4, 3, 6};
+        int[] result = new int[arr.length];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = -1; // initialize result array with -1
+        }
+
+        LinkedList<Integer> list = new LinkedList<>();
+
+        // Traverse the array
+        for (int i = 0; i < arr.length; i++) {
+            // While list is not empty and the current element is greater than the element
+            // at the last index of the list, we update the result for those elements
+            while (!list.isEmpty() && arr[i] > arr[list.peekLast()]) {
+                int index = list.removeLast(); // remove the index of the element whose NGE is found
+                result[index] = arr[i]; // update the result with the current element
+            }
+            // Add current index to the list for future comparison
+            list.addLast(i);
+        }
+
+        // Print the result
+        for (int num : result) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+
+
+#monotonic stack:-
+Stack(Last in first out)
+push-> adding the element in the stack
+pop-> removing the topmost element into the stack
+peek-> topmost element of the stack
+
+
+#Next greater element :-
+1.We initialize a result array with -1 for all elements initially.
+
+2.We traverse the input array while maintaining a monotonic stack. The stack will store indices of elements in decreasing order, so we can easily check if the current element is the next greater element for any previous elements.
+
+3.As we process each element:
+
+4.We compare it with the elements in the stack (starting from the top) to find the next greater element.
+
+5.For each element that is smaller than the current element, we pop it from the stack and update the result array.
+
+The current element is then added to the stack.
+
+#arraylist:-
+-> array having a fixed size we can't increase the size as well as we can't decrease. If array size is 5 maximum we can store 5 elements if we want to store 6th element we have to create one more array with the extra space. But we can't increase the size.
+-> but in arraylist the size will be dynamic you can increase the size as well as decrease 
+
+Syntax:-
+class Main{
+public static void main(String[] args){
+List<Wraper class of list type> ArrayListName = new ArrayList<>();
+List<Integer> arr = new ArrayList<>();
+}
+}
+
+
+Example:-
+
+1.List is an Interface
+2. The angular bracket are generics
+3. ArrayList is belongs to collection frameworks.
+4. We have to use wrapper class in the collection.
+Followed by arraylist name 
+#the arraylist which we are mention in syntax in syntax is class.
+#interface contained incomplete methods and class contained complete methods
+#As arraylist is a class we have to import it from Arraylist class.
+
+import java.util.*;
+class Main{
+public static void main(String[] args){
+List<Integer> Leaders = new ArrayList<>();
+int[] arr = {5,6,2,8,2,6};
+int max = Integer.MIN_VALUE;
+for(int i=arr.length-1;i>=0;i--){
+if(arr[i] >max){
+Leaders.add(arr[i]);
+max = arr[i];
+}
+}
+System.out.println(arr);
+}
+}
+
+
+import java.util.*;
+class Main{
+public static void main(String[] args){
+List<Integer> Leaders = new ArrayList<>();
+int[] arr = {5,6,2,8,2,6};
+int max = Integer.MIN_VALUE;
+for(int i=arr.length-1;i>=0;i--){
+if(arr[i] >max){
+Leaders.add(arr[i]);
+max = arr[i];
+}
+}
+Collections.reverse(Leaders);
+System.out.println(Leaders);
+}
+}
+
+
+
+-> In arraylist if the array got initialized with size 2 if we are trying to add 3rd element the size of the list will be doubled. and if the size of the array is 4 if you are trying to add 5th element again the sized will be doubled to 8. and vice versa. if arraysize is 8 and if we remove 4 element out of 8 and if we trying to remove 5th element the arraysize becomes half.
+
+ 
+arr[4] 1,2,3,4,5 --> arr[8] 5th element Added
+size will be arr[8]
+arr[8] 1,2,3, -->arr[4] 4th element will remove
+size will be arr[4]
+
+
+#dynamic array concept.
+
+
+#n-meeting  in the room
+
+Input: start[] = [1, 3, 0, 5, 8, 5], end[] =  [2, 4, 6, 7, 9, 9]
+Output: 4
+Explanation: Maximum four meetings can be held with given start and end timings. The meetings are - (1, 2), (3, 4), (5,7) and (8,9)
+
+arr = {(1,2),(3,4),(0,6),(5,7),(8,9),(5,9)}
+(0,6)(8,9) --> 2
+(s,e)-> make pairs
+
+26,37,19 --> accending to unit place is called custom sorting
+
+#greedy algo:-
+1. custom sorting:-
+if it is sorting we have only two possible option either accending or desceing and when it come to custom sorting we can sort the value according to our format.
+
+19,26,37(ascending)-->37,26,19(Descending)
+
+26,37,19 -->custom sorting
+
+-> from given arrays make pairs 
+-> sort the array based on end type.
+
+s = {1,3,0,5,8,5}
+e = {2,4,6,7,9,9}
+(s,e) make pairs
+arr = {(1,2),(3,4),(0,6),(5,7),(8,9),(5,9)}
+
+
+-->compare end time to starting time of the next pairs if starting time is strictly greater consider the meeting 
+
+arr = {(1,2),(3,4),(0,6),(5,7),(8,9),(5,9)}
+
+
+import java.util.*;
+class Meeting{
+int start, end;
+Meeting(int start, int end){
+this.start = start;
+this.end = end;
+}
+}
+public class MeetingScheduer{
+public static int maxMeeting(List<Meeting> meetings){
+meeting.sort(Comparator.comparingInt(m-> m.end));
+int count = 0,lastEndTime = -1;
+for(Meeting meeting :meetings){
+if(meeting.start > lastEndTime){
+count++;
+lastEndTime = meeting.end;
+}
+}
+return pairs;
+}
+}
+
+
+
+#median of two sorted Array
+
+public class Main {
+    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        if (nums1.length > nums2.length) {
+            // Always binary search the smaller array
+            int[] temp = nums1;
+            nums1 = nums2;
+            nums2 = temp;
+        }
+
+        int m = nums1.length;
+        int n = nums2.length;
+
+        int low = 0;
+        int high = m;
+
+        while (low <= high) {
+            int partition1 = (low + high) / 2;
+            int partition2 = (m + n + 1) / 2 - partition1;
+
+            // If partition1 is 0 it means nothing is there on the left side, so use -infinity for maxLeft1
+            // If partition1 is the length of nums1 it means nothing is there on the right side, so use +infinity for minRight1
+            int maxLeft1 = (partition1 == 0) ? Integer.MIN_VALUE : nums1[partition1 - 1];
+            int minRight1 = (partition1 == m) ? Integer.MAX_VALUE : nums1[partition1];
+
+            int maxLeft2 = (partition2 == 0) ? Integer.MIN_VALUE : nums2[partition2 - 1];
+            int minRight2 = (partition2 == n) ? Integer.MAX_VALUE : nums2[partition2];
+
+            // Check if we have found the correct partition
+            if (maxLeft1 <= minRight2 && maxLeft2 <= minRight1) {
+                // We have found the correct partition
+                if ((m + n) % 2 == 0) {
+                    // Even total length, take the average of the max left and min right
+                    return (Math.max(maxLeft1, maxLeft2) + Math.min(minRight1, minRight2)) / 2.0;
+                } else {
+                    // Odd total length, take the max of the left elements
+                    return Math.max(maxLeft1, maxLeft2);
+                }
+            } else if (maxLeft1 > minRight2) {
+                // We are too far right in nums1, need to move left
+                high = partition1 - 1;
+            } else {
+                // We are too far left in nums1, need to move right
+                low = partition1 + 1;
+            }
+        }
+
+        throw new IllegalArgumentException("Input arrays are not sorted.");
+    }
+
+    public static void main(String[] args) {
+        int[] nums1 = {1, 3};
+        int[] nums2 = {2};
+
+        System.out.println("Median: " + findMedianSortedArrays(nums1, nums2));
+
+        int[] nums1_2 = {1, 2};
+        int[] nums2_2 = {3, 4};
+        
+        System.out.println("Median: " + findMedianSortedArrays(nums1_2, nums2_2));
+    }
+}
+
+
