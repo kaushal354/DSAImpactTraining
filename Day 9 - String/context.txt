@@ -1,0 +1,122 @@
+#String:-
+
+345leetcode
+
+class Main{
+public static void main(String[] args){
+String str = "asdfghjkl";
+String updatstr = "";
+for(int i = 0;i<arr.length;i++){
+if (str[i] == g){
+continue;
+}
+else{
+updatestr = updatestr + str[i];
+}
+return updatestr;
+}
+
+#recursion:-
+class Main {
+public static void main(String[] args) {
+String str = "asdfghjkl";
+String result = removeChar(str, 0);
+System.out.println(result);  
+}
+static String removeChar(String str, int index) {
+if (index == str.length()) {
+return "";
+}
+char currentChar = str.charAt(index);
+
+if (currentChar == 'e') {
+return removeChar(str, index + 1); 
+} else {
+return currentChar + removeChar(str, index + 1); 
+}
+}
+}
+
+
+#charAt(index)
+#Substring(index)
+str.subString(1)#it start from next element and skip 0
+
+
+
+String:-
+
+Collection of Character is called String
+
+int arr = {1,2,3,4,5};
+
+As all the element are similar that is why we created an array to store all those similar element. And to get array value using index value. Similarly to store multiple character we created a string. 
+
+
+
+Str = "Hello";
+Str store in stack memory 
+String will be store inside heap memory inside heap pool. We string are created in string pool we can't modified string.
+
+
+When you created a string reference will be stored in stack memory object will created in string pool.so once a object created in string pool it will be created with some fixed size so we can't remove we can't add we can't modified a string that is why string are immutable.
+
+
+
+remove the target element. using recursion.
+
+"Hello"       "   " ->first recursion call
+"ello"        " H " -> second recursion call
+"llo"         " H " -> third recursion call
+"lo"          " Hl " -> fourth recursion call
+"o"           " hll" -> fifth recursion call
+"   "         "Hllo"  -> sixth recursion call 
+
+base case -> whenever string is empty we have to stop the recursion.
+1. CharAt(index) -> it is use to access an element using a index number.
+2. str.subString(1) -> use to slice a element in a string.
+
+
+
+class Main{
+static void skip(String ip){
+if(ip.isEmpty()){
+return "";
+}
+char ch = str.charAt(0);
+if(ch == 'e'){
+return skip(str.substring(1));
+}else{
+return ch + skip(str.substring(1));
+}
+}
+public statoc void main(String[] args){
+String ip = "Hello";
+String str = skip(ip);
+System.out.println(res);
+}
+}
+
+
+#From a given String skip the entire word hello.
+ip = "asdfHelloghjk";
+class Main{
+static void skip(String ip){
+if(ip.isEmpty()){
+return "";
+}
+char ch = str.charAt(0);
+if(ip.startsWith("Hello")){
+return skip(str.substring(5));
+}else{
+return ch + skip(str.substring(1));
+}
+}
+public statoc void main(String[] args){
+String ip = "Hello";
+String str = skip(ip);
+System.out.println(res);
+}
+}
+
+
