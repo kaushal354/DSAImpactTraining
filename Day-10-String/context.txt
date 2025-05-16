@@ -1,0 +1,213 @@
+#String:-
+
+String are class and array are object.
+Sequence of character is called string.
+Once String was created it can't be modified.
+
+All the String are created string pool.
+Inside String pool this hello are to
+String a = "hello";
+String b = "hello";
+
+--      ___
+  |    |        __________
+  | b  |       |            |
+  |  a |       |  hello     |
+  |____|       |            |
+               |____________|
+
+
+public static void main(String[] args){
+String a = "Hello";
+String b = "Hello";
+String a = new String("Hello");
+String b = new String("Hello");
+a==b 
+System.out.println(a==b); //True for first case in 2nd case it it false
+}
+
+
+//before creating object it will point only same address but after creating an object it will be point to two different location.
+
+--      ___
+  |    |        ____________
+  | b  |       |            |
+  |  a |       |  hello     |
+  |____|       |            |
+               |____________|
+
+In very first case string are created in string pool, in 2nd case string are created in outside the string pool. In 2nd case we are created two different object so they are point to two different location that why its output will be false.
+
+-> == operator is used to check the address or reference .
+
+Sytem.out.print(a.equals(b)); in first case it is true in 2nd case it also be true. because it compare data.
+
+
+Advantages -> inbuilt method
+Disadvantages -> inbuilt method
+
+
+# asdft asdfgt sdfgt
+split("t")
+
+# asdft , asdfgt , sdfgt
+  0        1        2
+split(" ")
+split(charAt(0))
+
+
+#method in String:-
+1. length() - returns the length of the string.
+2. charAt(int index) - returns the character at the specific index
+3. substring(int beginIndex, int endIndex)
+4. contain(CharSequence s)
+5. StartsWith(String prefix)/ endWith(String suffix)
+6. toUpperCase() / toLowerCase() 
+7. trim() 
+8. replace(String old, String new)
+9. split(String regex)
+10. equals(String anotherString)/ equalsIgnoreCase(String String)
+
+
+example:-
+public class StringMethodsExample {
+    public static void main(String[] args) {
+        String str = "  Hello World  ";
+
+        // 1. length() - returns the length of the string
+        System.out.println("1. Length: " + str.length()); // 15 (spaces included)
+
+        // 2. charAt(int index) - returns the character at the specific index
+        System.out.println("2. charAt(2): " + str.charAt(2)); // 'H'
+
+        // 3. substring(int beginIndex, int endIndex)
+        System.out.println("3. substring(2, 7): " + str.substring(2, 7)); // "Hello"
+
+        // 4. contains(CharSequence s)
+        System.out.println("4. contains(\"World\"): " + str.contains("World")); // true
+
+        // 5. startsWith(String prefix) / endsWith(String suffix)
+        System.out.println("5. startsWith(\"  He\"): " + str.startsWith("  He")); // true
+        System.out.println("   endsWith(\"ld  \"): " + str.endsWith("ld  ")); // true
+
+        // 6. toUpperCase() / toLowerCase()
+        System.out.println("6. toUpperCase(): " + str.toUpperCase()); // "  HELLO WORLD  "
+        System.out.println("   toLowerCase(): " + str.toLowerCase()); // "  hello world  "
+
+        // 7. trim() - removes leading and trailing spaces
+        System.out.println("7. trim(): '" + str.trim() + "'"); // 'Hello World'
+
+        // 8. replace(String old, String new)
+        System.out.println("8. replace(\"World\", \"Java\"): " + str.replace("World", "Java")); // "  Hello Java  "
+
+        // 9. split(String regex)
+        String[] words = str.trim().split(" ");
+        System.out.println("9. split(\" \"):");
+        for (String word : words) {
+            System.out.println("   " + word);
+        }
+
+        // 10. equals(String anotherString) / equalsIgnoreCase(String anotherString)
+        String str2 = "hello world";
+        System.out.println("10. equals(\"hello world\"): " + str.trim().equals(str2)); // false (case-sensitive)
+        System.out.println("    equalsIgnoreCase(\"hello world\"): " + str.trim().equalsIgnoreCase(str2)); // true
+    }
+}
+
+
+
+Output:-
+
+1. Length: 15
+2. charAt(2): H
+3. substring(2, 7): Hello
+4. contains("World"): true
+5. startsWith("  He"): true
+   endsWith("ld  "): true
+6. toUpperCase():   HELLO WORLD  
+   toLowerCase():   hello world  
+7. trim(): 'Hello World'
+8. replace("World", "Java"):   Hello Java  
+9. split(" "):
+   Hello
+   World
+10. equals("hello world"): false
+    equalsIgnoreCase("hello world"): true
+
+
+#Subset of array
+
+#[1,2,3]
+
+[],[1],[2],[3],[1,2],[2,3],[1,3],[1,2,3]
+
+#for a given array will get 2^N Subset
+
+#Subset is in sequence but not in continues.
+
+
+
+#Backtracking:-
+It is a example of recursion.
+We have only two steps taking the values and not taking the values.
+whenever you reach base case print all the base case element.
+
+when arr.length  == len(orarr.length) that is a base case.
+
+And in every recursive call remove the last element.then it will backtrack.
+
+
+class Main{
+public static void main(String[] args){
+int[] arr = {1,0,2,1,2,0,2,1,0,1};
+int j = 0;
+for(i = 0;i<arr.length;i++){
+
+}
+}
+}
+
+dutch national flag:-
+Step1:- Intilize l pointer to 0 index and m pointer to 0 and h point to length -1.
+
+Step2 :- the element between m and h are not sorted .so we have to run a loop from m to h.
+
+if both crosses it means we are reaching each and every element.
+
+If array of m is 0 swap arr[m] and arr[l] after swapping increase m and increase l .
+if array of m is equal to 1 just move m pointer .
+if arr m  == 2 swap arr[m] and arr[h] after swapping decrease h
+
+
+
+
+int arr = {1,0,2,1,2,0,2,1,0,1};
+int m = 0;
+int l = 0;
+int k = arr.length;
+while(m<h){
+if(arr[m]==arr[i]
+}
+
+
+
+class Main{
+public static void main(String[] args){
+int l,m = 0;
+int h = arr.length-1;
+while(m<h){
+if(arr[m] == 0){
+swap(arr[m],arr[l]);
+m++;
+l++;
+}else if(arr[m] == 1){
+m++;
+}
+else{
+swap(arr[h],arr[m]);
+h--;
+}
+}
+
+}
+}

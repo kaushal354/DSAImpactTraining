@@ -1,0 +1,94 @@
+collection framework:-
+
+List 				set 			Map
+--->ArrayList		--> Hashset		---> HashMap
+---> LinkedList		-->LinkedHashSet	---> LinkedHashMap
+--->Vector		-->TreeSet		--->TreeMap
+
+
+List Set and Map These are Interfaces And rest are classes.
+Interface content incomplete method while classes contain complete method.
+
+
+#List :-
+List contain order element and which can accept duplicates.
+
+Arraylist is a dynamic array which can expand its size dynamically by 1.5 times.
+
+Vector is also a dynamic array which can expand its size dynamically by 2 times.
+
+LinkedList Collection of similar type of element in random allocation.
+
+
+
+
+
+#Set:-
+Element are unordered and it won't accept duplicate.
+Hashset is a class which is use to store set element.
+Hash set is unordered if you use treeset element will be order
+same for linkedhash and treeset
+
+
+#Map:-
+map contains key value pairs.
+Maps(Key,Value)
+And to store key value pair we use hashmap
+
+
+set and map are used to get the result in constant time complexity which is nothing but O(1) Time complexity.
+in sets and map we don't have index value just like array. So we can't use simple for loop. We have to use for each
+Loops. for(i:set)
+
+
+
+Syntax:-
+
+List<Integer> List  = new ArrayList<>();
+Set<Integer> st = new Hashset<>();
+Map<Integer, Integer> mp = new HashMap<>();
+
+#leet code 1
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {2, 7, 11, 15};
+        int target = 9; // Define a target value
+        Set<Integer> st = new HashSet<>();
+        
+        for (int i = 0; i < arr.length; i++) {
+            int rem = target - arr[i];
+            if (st.contains(rem)) {
+                System.out.println("Pair found: [" + rem + ", " + arr[i] + "]");
+                return; // Exit once a pair is found
+            }
+            st.add(arr[i]);
+        }
+        
+        System.out.println("No pair found");
+    }
+}
+
+
+
+#kedan's algorithm:
+From the given array we have to find maximum sum of subarray
+int arr = [1,2,3]
+write all the subarray.
+[1],[2],[3],[1,2],[2,3],[1,2,3]
+To find maximum sum of subarray for optimal solution.
+
+We can use kedan's algo.
+
+Step1 :- Initilize two variables
+first variable individual sum and another for 2nd variable for maxsum
+
+SUM =0 and maxsum is with extreme negative value.
+
+Step3:-run a loop from 0 to n-1 and get the value from array and add them .
+
+Step4:- always update max value. 
+step5:- our target is to get the max sum if we carry negative value the overall sum will be reduced. So if we got sum <0 reached out the sum with 0
+
+At the end of the loop return max
